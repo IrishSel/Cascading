@@ -5,7 +5,7 @@ void setup() {
   Serial.begin(9600);
   while (!Serial) { }
   mySerial.begin(9600);
-  mySerial.println("Hello");
+  mySerial.println("Hello Irishka");
 
 }
 
