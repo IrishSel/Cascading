@@ -1,25 +1,25 @@
 #include <SoftwareSerial.h> 
 SoftwareSerial mySerial(10, 11);
 
-#define ledpin_2 3
-#define ledpin_3 4
-#define ledpin_4 5
-#define ledpin_5 6
-#define ledpin_6 7
-#define ledpin_7 8
-#define ledpin_8 9
-#define ledpin_9 12
+#define ledpin2 3
+#define ledpin3 4
+#define ledpin4 5
+#define ledpin5 6
+#define ledpin6 7
+#define ledpin7 8
+#define ledpin8 9
+#define ledpin9 12
 
 void LOW()
 {
-  digitalWrite(ledpin_2, LOW);
-  digitalWrite(ledpin_3, LOW);
-  digitalWrite(ledpin_4, LOW);
-  digitalWrite(ledpin_5, LOW);
-  digitalWrite(ledpin_6, LOW);
-  digitalWrite(ledpin_7, LOW);
-  digitalWrite(ledpin_8, LOW);
-  digitalWrite(ledpin_9, LOW);
+  digitalWrite(ledpin2, LOW);
+  digitalWrite(ledpin3, LOW);
+  digitalWrite(ledpin4, LOW);
+  digitalWrite(ledpin5, LOW);
+  digitalWrite(ledpin6, LOW);
+  digitalWrite(ledpin7, LOW);
+  digitalWrite(ledpin8, LOW);
+  digitalWrite(ledpin9, LOW);
 }
 
 void setup() {
@@ -28,14 +28,14 @@ void setup() {
   while (!Serial) { } 
   Serial.println("Enter");
 
-  pinMode(ledpin_2, OUTPUT);
-  pinMode(ledpin_3, OUTPUT);
-  pinMode(ledpin_4, OUTPUT);
-  pinMode(ledpin_5, OUTPUT);
-  pinMode(ledpin_6, OUTPUT);
-  pinMode(ledpin_7, OUTPUT);
-  pinMode(ledpin_8, OUTPUT);
-  pinMode(ledpin_9, OUTPUT);
+  pinMode(ledpin2, OUTPUT);
+  pinMode(ledpin3, OUTPUT);
+  pinMode(ledpin4, OUTPUT);
+  pinMode(ledpin5, OUTPUT);
+  pinMode(ledpin6, OUTPUT);
+  pinMode(ledpin7, OUTPUT);
+  pinMode(ledpin8, OUTPUT);
+  pinMode(ledpin9, OUTPUT);
 }
 
 int first_segment;
@@ -58,82 +58,82 @@ void loop()
 
     if (first_segment == 1)
     {
-      digitalWrite(ledpin_9, HIGH);
-      digitalWrite(ledpin_4, HIGH);
+      digitalWrite(ledpin9, HIGH);
+      digitalWrite(ledpin4, HIGH);
     }
     else if (first_segment == 2)
     {
-      digitalWrite(ledpin_2, HIGH);
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin2, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin8, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
     else if (first_segment == 3)
     {
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin8, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
     else if (first_segment == 4)
     {
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin6, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
     else if (first_segment == 5)
     {
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_8, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin6, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin8, HIGH);
     }
     else if (first_segment == 6)
     {
-      digitalWrite(ledpin_2, HIGH);
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_8, HIGH);
+      digitalWrite(ledpin2, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin6, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin8, HIGH);
     }
     else if (first_segment == 7)
     {
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin8, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
     else if (first_segment == 8)
     {
-      digitalWrite(ledpin_2, HIGH);
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin2, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin6, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin8, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
     else if (first_segment == 9)
     {
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_7, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin6, HIGH);
+      digitalWrite(ledpin7, HIGH);
+      digitalWrite(ledpin8, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
     else if (first_segment == 0)
     {
-      digitalWrite(ledpin_2, HIGH);
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
+      digitalWrite(ledpin2, HIGH);
+      digitalWrite(ledpin3, HIGH);
+      digitalWrite(ledpin4, HIGH);
+      digitalWrite(ledpin6, HIGH);
+      digitalWrite(ledpin8, HIGH);
+      digitalWrite(ledpin9, HIGH);
     }
   }
   else if (Serial.available() == 1)
