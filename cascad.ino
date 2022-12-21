@@ -10,7 +10,7 @@ SoftwareSerial mySerial(10, 11);
 #define ledpin_8 9
 #define ledpin_9 12
 
-void low()
+void LOW()
 {
   digitalWrite(ledpin_2, LOW);
   digitalWrite(ledpin_3, LOW);
@@ -47,7 +47,7 @@ void loop()
   delay(100);
   if (Serial.available() == 2)
   {
-    low();
+    LOW();
 
     first_segment = Serial.read() - '0';
     second_segment = Serial.read();
@@ -138,7 +138,7 @@ void loop()
   }
   else if (Serial.available() == 1)
   {
-    low();
+    LOW();
 
     first_segment = 0;
     second_segment = Serial.read();
