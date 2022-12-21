@@ -147,15 +147,5 @@ void loop()
     Serial.println(second_segment);
 
     mySerial.write(second_segment);
-
-    if (first_segment == 0)
-    {
-      digitalWrite(ledpin_2, HIGH);
-      digitalWrite(ledpin_3, HIGH);
-      digitalWrite(ledpin_4, HIGH);
-      digitalWrite(ledpin_6, HIGH);
-      digitalWrite(ledpin_8, HIGH);
-      digitalWrite(ledpin_9, HIGH);
-    }
   }
 }
