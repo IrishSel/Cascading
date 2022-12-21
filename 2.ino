@@ -35,21 +35,21 @@ void setup()
   pinMode(led_pin_9, OUTPUT);
 }
 
-int second_part;
+int part_end;
 
 void loop() 
 {
   if (Serial.available() > 0)
   {
     low();
-    second_part = Serial.read() - '0';
+    part_end = Serial.read() - '0';
 
-    if (second_part == 1)
+    if (part_end == 1)
     {
       digitalWrite(led_pin_9, HIGH);
       digitalWrite(led_pin_4, HIGH);
     }
-    else if (second_part == 2)
+    else if (part_end == 2)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -57,7 +57,7 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (second_part == 3)
+    else if (part_end == 3)
     {
       digitalWrite(led_pin_3, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -65,14 +65,14 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (second_part == 4)
+    else if (part_end == 4)
     {
       digitalWrite(led_pin_4, HIGH);
       digitalWrite(led_pin_6, HIGH);
       digitalWrite(led_pin_7, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (second_part == 5)
+    else if (part_end == 5)
     {
       digitalWrite(led_pin_3, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -80,7 +80,7 @@ void loop()
       digitalWrite(led_pin_7, HIGH);
       digitalWrite(led_pin_8, HIGH);
     }
-    else if (second_part == 6)
+    else if (part_end == 6)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -89,13 +89,13 @@ void loop()
       digitalWrite(led_pin_7, HIGH);
       digitalWrite(led_pin_8, HIGH);
     }
-    else if (second_part == 7)
+    else if (part_end == 7)
     {
       digitalWrite(led_pin_4, HIGH);
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (second_part == 8)
+    else if (part_end == 8)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -105,7 +105,7 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (second_part == 9)
+    else if (part_end == 9)
     {
       digitalWrite(led_pin_3, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -114,7 +114,7 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (second_part == 0)
+    else if (part_end == 0)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
