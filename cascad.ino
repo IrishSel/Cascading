@@ -26,7 +26,7 @@ void setup() {
   Serial.begin(9600);
   mySerial.begin(9600); 
   while (!Serial) { } 
-  Serial.println("Begin!");
+  Serial.println("Enter");
 
   pinMode(led_pin_2, OUTPUT);
   pinMode(led_pin_3, OUTPUT);
