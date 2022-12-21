@@ -7,7 +7,7 @@
 #define ledpin_8 9
 #define ledpin_9 12
 
-void low()
+void LOW()
 {
   digitalWrite(ledpin_2, LOW);
   digitalWrite(ledpin_3, LOW);
@@ -41,7 +41,7 @@ void loop()
 {
   if (Serial.available() > 0)
   {
-    low();
+    LOW();
     second_segment = Serial.read() - '0';
 
     if (second_segment == 1)
