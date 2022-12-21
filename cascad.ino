@@ -56,7 +56,7 @@ void loop()
 
     mySerial.write(part_end);
 
-    if (part_begint == 1)
+    if (part_begin == 1)
     {
       digitalWrite(led_pin_9, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -141,7 +141,7 @@ void loop()
     low();
 
     part_begin = 0;
-    second_part = Serial.read();
+    part_end = Serial.read();
     
     Serial.println(part_begin);
     Serial.println(part_end);
