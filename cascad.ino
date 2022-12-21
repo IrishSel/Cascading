@@ -1,14 +1,14 @@
 #include <SoftwareSerial.h> 
 SoftwareSerial mySerial(10, 11);
 
-#define led_pin_2 2
-#define led_pin_3 3
-#define led_pin_4 4
-#define led_pin_5 5
-#define led_pin_6 6
-#define led_pin_7 7
-#define led_pin_8 8
-#define led_pin_9 9
+#define led_pin_2 3
+#define led_pin_3 4
+#define led_pin_4 5
+#define led_pin_5 6
+#define led_pin_6 7
+#define led_pin_7 8
+#define led_pin_8 9
+#define led_pin_9 12
 
 void low()
 {
