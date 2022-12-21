@@ -38,8 +38,8 @@ void setup() {
   pinMode(led_pin_9, OUTPUT);
 }
 
-int first_part;
-char second_part;
+int part_begin;
+char part_end;
 String number;
 
 void loop() 
@@ -49,19 +49,19 @@ void loop()
   {
     low();
 
-    first_part = Serial.read() - '0';
-    second_part = Serial.read();
-    Serial.println(first_part);
-    Serial.println(second_part);
+    part_begin = Serial.read() - '0';
+    part_end = Serial.read();
+    Serial.println(part_begin);
+    Serial.println(part_end);
 
-    mySerial.write(second_part);
+    mySerial.write(part_end);
 
-    if (first_part == 1)
+    if (part_begint == 1)
     {
       digitalWrite(led_pin_9, HIGH);
       digitalWrite(led_pin_4, HIGH);
     }
-    else if (first_part == 2)
+    else if (part_begin == 2)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -69,7 +69,7 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (first_part == 3)
+    else if (part_begin == 3)
     {
       digitalWrite(led_pin_3, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -77,14 +77,14 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (first_part == 4)
+    else if (part_begin == 4)
     {
       digitalWrite(led_pin_4, HIGH);
       digitalWrite(led_pin_6, HIGH);
       digitalWrite(led_pin_7, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (first_part == 5)
+    else if (part_begin == 5)
     {
       digitalWrite(led_pin_3, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -92,7 +92,7 @@ void loop()
       digitalWrite(led_pin_7, HIGH);
       digitalWrite(led_pin_8, HIGH);
     }
-    else if (first_part == 6)
+    else if (part_begin == 6)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -101,13 +101,13 @@ void loop()
       digitalWrite(led_pin_7, HIGH);
       digitalWrite(led_pin_8, HIGH);
     }
-    else if (first_part == 7)
+    else if (part_begin == 7)
     {
       digitalWrite(led_pin_4, HIGH);
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (first_part == 8)
+    else if (part_begin == 8)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -117,7 +117,7 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (first_part == 9)
+    else if (part_begin == 9)
     {
       digitalWrite(led_pin_3, HIGH);
       digitalWrite(led_pin_4, HIGH);
@@ -126,7 +126,7 @@ void loop()
       digitalWrite(led_pin_8, HIGH);
       digitalWrite(led_pin_9, HIGH);
     }
-    else if (first_part == 0)
+    else if (part_begin == 0)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
@@ -140,15 +140,15 @@ void loop()
   {
     low();
 
-    first_part = 0;
+    part_begin = 0;
     second_part = Serial.read();
     
-    Serial.println(first_part);
-    Serial.println(second_part);
+    Serial.println(part_begin);
+    Serial.println(part_end);
 
-    mySerial.write(second_part);
+    mySerial.write(part_end);
 
-    if (first_part == 0)
+    if (part_begin == 0)
     {
       digitalWrite(led_pin_2, HIGH);
       digitalWrite(led_pin_3, HIGH);
